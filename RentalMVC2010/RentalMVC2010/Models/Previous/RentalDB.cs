@@ -10,10 +10,11 @@ namespace RentalMVC2010.Models
 {
     public class RentalDB : DbContext
     {
-        //public RentalDB():base("RentalDB")
-        //{
-        //}
+
 
         public DbSet<Unit> Units { get; set; }
+
+        public DbSet<UnitGallery> UnitGallery { get; set; }
+
     }
 }

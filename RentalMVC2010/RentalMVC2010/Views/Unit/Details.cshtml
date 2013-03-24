@@ -1,0 +1,71 @@
+﻿@model RentalMVC2010.Models.Unit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Unit</legend>
+
+   <div class="display-label">PrimaryImagePath</div>
+    <div class="display-field">
+        @*@Html.DisplayFor(model => model.PrimaryImagePath)*@
+        <img src="/images/@(Model.PrimaryImagePath)" width="300px" height="300px" />
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">State</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">Bed</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bed)
+    </div>
+
+    <div class="display-label">Bathroom</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bathroom)
+    </div>
+
+    <div class="display-label">SquareFoot</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SquareFoot)
+    </div>
+
+    <div class="display-label">YearBuilt</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearBuilt)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+ 
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UnitId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+<p>
+    @{
+        Html.RenderAction("Index", "UnitGallery", new { id = Model.UnitId });
+
+    }
+</p>

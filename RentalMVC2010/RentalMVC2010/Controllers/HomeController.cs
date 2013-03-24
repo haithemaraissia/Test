@@ -10,11 +10,11 @@ namespace RentalMVC2010.Controllers
 {
     public class HomeController : Controller
     {
-        private RentalDB _rentalDB = new RentalDB();
+        private  RentalDB _rentalDB = new RentalDB();
         
         public ActionResult Index()
         {
-            var model = _rentalDB.Units.ToList();
+            //var model = _rentalDB.Units.ToList();
 
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
@@ -84,5 +84,13 @@ namespace RentalMVC2010.Controllers
         //{
         //    throw new NotImplementedException();
         //}
+        public ActionResult Details(int UnitId)
+        {
+            //Movie movie = db.Movies.Find(id);
+            //return View(movie);
+
+            var model = _rentalDB.Units.Find(UnitId);
+            return View(model);
+        }
     }
 }

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RentalDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RentalDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="RentalDBModel.C__MigrationHistory" />
+    <EntitySet Name="Units" EntityType="RentalDBModel.Unit" />
+    <EntitySet Name="UnitGalleries" EntityType="RentalDBModel.UnitGallery" />
+    <AssociationSet Name="FK_UnitGallery_Units" Association="RentalDBModel.FK_UnitGallery_Units">
+      <End Role="Unit" EntitySet="Units" />
+      <End Role="UnitGallery" EntitySet="UnitGalleries" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="UnitId" />
+    </Key>
+    <Property Name="UnitId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Bed" Type="Int32" Nullable="false" />
+    <Property Name="Bathroom" Type="Double" Nullable="false" />
+    <Property Name="SquareFoot" Type="Double" Nullable="false" />
+    <Property Name="YearBuilt" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PrimaryImagePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UnitGalleries" Relationship="RentalDBModel.FK_UnitGallery_Units" FromRole="Unit" ToRole="UnitGallery" />
+  </EntityType>
+  <EntityType Name="UnitGallery">
+    <Key>
+      <PropertyRef Name="PhotoId" />
+    </Key>
+    <Property Type="Int32" Name="PhotoId" Nullable="false" />
+    <Property Type="String" Name="Path" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Caption" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Rank" />
+    <Property Type="Int32" Name="UnitId" Nullable="false" />
+    <NavigationProperty Name="Unit" Relationship="RentalDBModel.FK_UnitGallery_Units" FromRole="UnitGallery" ToRole="Unit" />
+  </EntityType>
+  <Association Name="FK_UnitGallery_Units">
+    <End Type="RentalDBModel.Unit" Role="Unit" Multiplicity="1" />
+    <End Type="RentalDBModel.UnitGallery" Role="UnitGallery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="UnitId" />
+      </Principal>
+      <Dependent Role="UnitGallery">
+        <PropertyRef Name="UnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

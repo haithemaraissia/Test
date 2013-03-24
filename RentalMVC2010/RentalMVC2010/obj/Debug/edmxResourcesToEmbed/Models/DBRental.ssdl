@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RentalDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RentalDBModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="RentalDBModel.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnitGallery" EntityType="RentalDBModel.Store.UnitGallery" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Units" EntityType="RentalDBModel.Store.Units" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_UnitGallery_Units" Association="RentalDBModel.Store.FK_UnitGallery_Units">
+      <End Role="Units" EntitySet="Units" />
+      <End Role="UnitGallery" EntitySet="UnitGallery" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="UnitGallery">
+    <Key>
+      <PropertyRef Name="PhotoId" />
+    </Key>
+    <Property Name="PhotoId" Type="int" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Caption" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="UnitId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Units">
+    <Key>
+      <PropertyRef Name="UnitId" />
+    </Key>
+    <Property Name="UnitId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="Bed" Type="int" Nullable="false" />
+    <Property Name="Bathroom" Type="float" Nullable="false" />
+    <Property Name="SquareFoot" Type="float" Nullable="false" />
+    <Property Name="YearBuilt" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="PrimaryImagePath" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_UnitGallery_Units">
+    <End Role="Units" Type="RentalDBModel.Store.Units" Multiplicity="1" />
+    <End Role="UnitGallery" Type="RentalDBModel.Store.UnitGallery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Units">
+        <PropertyRef Name="UnitId" />
+      </Principal>
+      <Dependent Role="UnitGallery">
+        <PropertyRef Name="UnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
