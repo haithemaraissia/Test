@@ -2,3 +2,8 @@ C:\Users\Haithem\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\bin\RentalMVC
 C:\Users\Haithem\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\bin\RentalMVC2010.pdb
 C:\Users\Haithem\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\obj\Debug\RentalMVC2010.dll
 C:\Users\Haithem\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\obj\Debug\RentalMVC2010.pdb
+C:\Users\h_a\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\bin\RentalMVC2010.dll
+C:\Users\h_a\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\bin\RentalMVC2010.pdb
+C:\Users\h_a\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\obj\Debug\RentalMVC2010.csprojResolveAssemblyReference.cache
+C:\Users\h_a\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\obj\Debug\RentalMVC2010.dll
+C:\Users\h_a\Documents\GitHub\Test\RentalMVC2010\RentalMVC2010\obj\Debug\RentalMVC2010.pdb

@@ -16,7 +16,6 @@
     <Property Name="Path" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Caption" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Rank" Type="Int32" Nullable="false" />
-    <Property Name="Unit_UnitId" Type="Int32" />
     <Property Type="Int32" Name="UnitId" Nullable="false" />
     <NavigationProperty Name="Unit_1" Relationship="RentalDBModel.FK_dbo_UnitGalleries_dbo_Units_Unit_UnitId1" FromRole="UnitGallery" ToRole="Unit" />
   </EntityType>

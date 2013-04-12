@@ -2,18 +2,18 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="RentalDBModelStoreContainer" CdmEntityContainer="RentalDBEntities">
     <EntitySetMapping Name="UnitGalleries">
-      <EntityTypeMapping TypeName="RentalDBModel.UnitGallery">
+      <EntityTypeMapping TypeName="IsTypeOf(RentalDBModel.UnitGallery)">
         <MappingFragment StoreEntitySet="UnitGalleries">
-          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Path" ColumnName="Path" />
           <ScalarProperty Name="Caption" ColumnName="Caption" />
           <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Units">
-      <EntityTypeMapping TypeName="RentalDBModel.Unit">
+      <EntityTypeMapping TypeName="IsTypeOf(RentalDBModel.Unit)">
         <MappingFragment StoreEntitySet="Units">
           <ScalarProperty Name="UnitId" ColumnName="UnitId" />
           <ScalarProperty Name="Address" ColumnName="Address" />

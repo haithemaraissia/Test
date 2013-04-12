@@ -18,7 +18,6 @@ namespace RentalMVC2010.Models
         public string Path { get; set; }
         public string Caption { get; set; }
         public int Rank { get; set; }
-        public Nullable<int> Unit_UnitId { get; set; }
         public int UnitId { get; set; }
     
         public virtual Unit Unit_1 { get; set; }

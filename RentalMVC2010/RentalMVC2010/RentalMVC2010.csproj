@@ -84,6 +84,7 @@
     <Compile Include="MobileViewEngine.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\RentalDB.cs" />
     <Compile Include="Models\RentalDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +132,7 @@
     <Content Include="images\home7.jpg" />
     <Content Include="images\home8.jpg" />
     <Content Include="images\home9.jpg" />
+    <Content Include="Models\RentalDB.edmx.sql" />
     <Content Include="Scripts\html5.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />

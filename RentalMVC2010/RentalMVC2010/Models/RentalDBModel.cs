@@ -9,15 +9,4 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using RentalMVC2010.Models;
 
-public class RentalDB : DbContext
-{
-
-
-    public DbSet<Unit> Units { get; set; }
-
-    public DbSet<UnitGallery> UnitGallery { get; set; }
-
-}

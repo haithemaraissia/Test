@@ -3,18 +3,18 @@
   <EntityContainer Name="RentalDBModelStoreContainer">
     <EntitySet Name="UnitGalleries" EntityType="RentalDBModel.Store.UnitGalleries" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Units" EntityType="RentalDBModel.Store.Units" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_dbo_UnitGalleries_dbo_Units_UnitId" Association="RentalDBModel.Store.FK_dbo_UnitGalleries_dbo_Units_UnitId">
-      <End Role="Units" EntitySet="Units" />
-      <End Role="UnitGalleries" EntitySet="UnitGalleries" />
+    <AssociationSet Name="FK_dbo_UnitGalleries_dbo_Units_Unit_UnitId1" Association="RentalDBModel.Store.FK_dbo_UnitGalleries_dbo_Units_Unit_UnitId1">
+      <End Role="Unit" EntitySet="Units" />
+      <End Role="UnitGallery" EntitySet="UnitGalleries" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="UnitGalleries">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Path" Type="nvarchar(max)" />
-    <Property Name="Caption" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Caption" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Rank" Type="int" Nullable="false" />
     <Property Name="UnitId" Type="int" Nullable="false" />
   </EntityType>
@@ -22,27 +22,25 @@
     <Key>
       <PropertyRef Name="UnitId" />
     </Key>
-    <Property Name="UnitId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Address" Type="nvarchar(max)" />
-    <Property Name="City" Type="nvarchar(max)" />
-    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="UnitId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Bed" Type="int" Nullable="false" />
     <Property Name="Bathroom" Type="float" Nullable="false" />
     <Property Name="SquareFoot" Type="float" Nullable="false" />
     <Property Name="YearBuilt" Type="int" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="PrimaryImagePath" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PrimaryImagePath" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
-  <Association Name="FK_dbo_UnitGalleries_dbo_Units_UnitId">
-    <End Role="Units" Type="RentalDBModel.Store.Units" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="UnitGalleries" Type="RentalDBModel.Store.UnitGalleries" Multiplicity="*" />
+  <Association Name="FK_dbo_UnitGalleries_dbo_Units_Unit_UnitId1">
+    <End Role="Unit" Type="RentalDBModel.Store.Units" Multiplicity="1" />
+    <End Role="UnitGallery" Type="RentalDBModel.Store.UnitGalleries" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Units">
+      <Principal Role="Unit">
         <PropertyRef Name="UnitId" />
       </Principal>
-      <Dependent Role="UnitGalleries">
+      <Dependent Role="UnitGallery">
         <PropertyRef Name="UnitId" />
       </Dependent>
     </ReferentialConstraint>

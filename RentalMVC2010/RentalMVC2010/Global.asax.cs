@@ -119,7 +119,7 @@ namespace RentalMVC2010
                                             UnitId = myUnit1.UnitId,
                                             Unit_1 = myUnit1,
 
-                                            Unit_UnitId = myUnit1.UnitId
+                                            //Unit_UnitId = myUnit1.UnitId
 
                                         }
                 );
@@ -136,7 +136,7 @@ namespace RentalMVC2010
                 UnitId = myUnit1.UnitId,
                 Unit_1 = myUnit1,
 
-                Unit_UnitId = myUnit1.UnitId
+                //Unit_UnitId = myUnit1.UnitId
 
             }
               );
@@ -152,7 +152,7 @@ namespace RentalMVC2010
                 UnitId = myUnit1.UnitId,
                 Unit_1 = myUnit1,
 
-                Unit_UnitId = myUnit1.UnitId
+                //Unit_UnitId = myUnit1.UnitId
 
             }
               );
@@ -168,7 +168,7 @@ namespace RentalMVC2010
                 UnitId = myUnit2.UnitId,
                 Unit_1 = myUnit2,
 
-                Unit_UnitId = myUnit2.UnitId
+                //Unit_UnitId = myUnit2.UnitId
 
             }
               );
@@ -181,9 +181,9 @@ namespace RentalMVC2010
                 Rank = 2,
                 Id = 2,
                 UnitId = myUnit2.UnitId,
-                Unit_1 = myUnit2,
+                //Unit_1 = myUnit2,
 
-                Unit_UnitId = myUnit2.UnitId
+                //Unit_UnitId = myUnit2.UnitId
 
             }
               );
@@ -198,7 +198,7 @@ namespace RentalMVC2010
                 UnitId = myUnit2.UnitId,
                 Unit_1 = myUnit2,
 
-                Unit_UnitId = myUnit2.UnitId
+                //Unit_UnitId = myUnit2.UnitId
 
             }
               );
