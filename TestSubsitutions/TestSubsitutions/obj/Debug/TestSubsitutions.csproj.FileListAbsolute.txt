@@ -1,0 +1,8 @@
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\bin\TestSubsitutions.dll
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\bin\TestSubsitutions.pdb
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\bin\EntityFramework.dll
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\bin\EntityFramework.xml
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\obj\Debug\TestSubsitutions.csprojResolveAssemblyReference.cache
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\obj\Debug\TestSubsitutions.dll
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\obj\Debug\TestSubsitutions.pdb
+C:\Users\Haithem\Documents\GitHub\Test\TestSubsitutions\TestSubsitutions\bin\TestSubsitutions.XML
